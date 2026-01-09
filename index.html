@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SocialExo</title>
+
+  <!-- Desktop-first like Genix -->
+  <meta name="viewport" content="width=1200">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">SOCIALEXO</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="purple-orb"></div>
+
+  <div class="hero-content fade-up">
+    <h1>Social Authority, Reimagined</h1>
+    <p>Verification • Recovery • Takedowns • Digital Control</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="content-section">
+  <h2 class="fade-up">Who We Are</h2>
+  <p class="fade-up">
+    SocialExo is a digital authority agency focused on platform-level control across
+    Instagram, Snapchat, Twitter, Telegram, and Facebook.
+  </p>
+  <p class="fade-up">
+    We operate beyond surface-level growth tactics — our expertise lies in verification,
+    account recovery, reputation protection, and strategic takedown execution.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <h2 class="fade-up">Our Capabilities</h2>
+
+  <div class="service-block fade-up">
+    <h3>Account Verification</h3>
+    <p>Premium verification workflows across major social platforms.</p>
+  </div>
+
+  <div class="service-block fade-up">
+    <h3>Account Recovery</h3>
+    <p>Recovery of hacked, disabled, or restricted accounts.</p>
+  </div>
+
+  <div class="service-block fade-up">
+    <h3>Takedowns & Protection</h3>
+    <p>Removal of impersonation, abuse, and harmful content.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="content-section">
+  <h2 class="fade-up">Work With Us</h2>
+  <p class="fade-up">
+    Serious inquiries only. We work selectively with brands, creators, and individuals.
+  </p>
+</section>
+
+<footer>
+  © 2026 SocialExo
+</footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
