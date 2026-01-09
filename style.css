@@ -1,0 +1,171 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+html { scroll-behavior: smooth; }
+
+body {
+  min-width: 1200px;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #9a9a9a;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #b14cff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #120015, #000);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.hero p {
+  margin-top: 14px;
+  font-size: 20px;
+  color: #b5b5b5;
+}
+
+/* ORB */
+.purple-orb {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, #b14cff 0%, rgba(177,76,255,0.4) 35%, transparent 70%);
+  filter: blur(80px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbMove 16s linear infinite;
+  z-index: 0;
+}
+
+@keyframes orbMove {
+  0% { transform: translate(-50%, -50%) translateX(-140px); }
+  50% { transform: translate(-50%, -50%) translateX(140px); }
+  100% { transform: translate(-50%, -50%) translateX(-140px); }
+}
+
+/* PAGE HERO */
+.page-hero {
+  height: 60vh;
+  padding: 160px 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+}
+
+.page-hero p {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #b8b8b8;
+}
+
+/* CONTENT */
+.content-section,
+.services-section {
+  padding: 160px 220px;
+}
+
+.content-section h2 {
+  font-size: 46px;
+  margin-bottom: 28px;
+}
+
+.content-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #bdbdbd;
+  max-width: 900px;
+  margin-bottom: 22px;
+}
+
+/* SERVICES */
+.service-block {
+  margin-bottom: 60px;
+  padding: 36px;
+  border: 1px solid #1b1b1b;
+  transition: 0.4s ease;
+}
+
+.service-block:hover {
+  border-color: #b14cff;
+  transform: translateY(-10px);
+}
+
+.service-block h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* FOOTER */
+footer {
+  padding: 50px;
+  text-align: center;
+  color: #555;
+}
+
+/* SCROLL ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
