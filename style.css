@@ -1,0 +1,154 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+html { scroll-behavior: smooth; }
+
+body {
+  min-width: 1200px;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 22px 70px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(14px);
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #b14cff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #140018, #000);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* TEXT */
+.hero h1 {
+  font-size: 66px;
+  font-weight: 800;
+}
+
+.hero p {
+  margin-top: 16px;
+  font-size: 20px;
+  color: #bdbdbd;
+}
+
+/* 🔮 REAL GENIX ORB */
+.purple-orb {
+  position: absolute;
+  width: 720px;
+  height: 720px;
+  background: radial-gradient(
+    circle,
+    #c084ff 0%,
+    rgba(177, 76, 255, 0.5) 30%,
+    transparent 70%
+  );
+  filter: blur(120px);
+  animation: floatOrb 18s ease-in-out infinite alternate;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* FLOATING MOTION */
+@keyframes floatOrb {
+  0% {
+    transform: translate(-50%, -50%) translate(-160px, 80px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(140px, -120px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(-100px, 140px);
+  }
+}
+
+/* SECTIONS */
+.content-section,
+.services-section {
+  padding: 160px 220px;
+}
+
+.content-section h2,
+.services-section h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.content-section p {
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #bdbdbd;
+  margin-bottom: 22px;
+}
+
+/* SERVICES */
+.service-block {
+  margin-bottom: 40px;
+  padding: 36px;
+  border: 1px solid #1a1a1a;
+  transition: 0.4s ease;
+}
+
+.service-block:hover {
+  border-color: #b14cff;
+  transform: translateY(-12px);
+}
+
+/* FOOTER */
+footer {
+  padding: 60px;
+  text-align: center;
+  color: #555;
+}
+
+/* SCROLL ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 1s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
