@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studify – AI Study Helper</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6fb;
+      color: #222;
+    }
+
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .answer-box {
+      margin-top: 30px;
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .answer-box h2 {
+      margin-top: 0;
+    }
+
+    #answer {
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📘 Studify</h1>
+    <p>Your AI-powered study helper</p>
+  </header>
+
+  <div class="container">
+
+    <label for="class">Select Class</label>
+    <select id="class">
+      <option value="6">Class 6</option>
+      <option value="7">Class 7</option>
+      <option value="8">Class 8</option>
+      <option value="9" selected>Class 9</option>
+      <option value="10">Class 10</option>
+      <option value="11">Class 11</option>
+      <option value="12">Class 12</option>
+    </select>
+
+    <label for="subject">Select Subject</label>
+    <select id="subject">
+      <option value="Science" selected>Science</option>
+      <option value="Mathematics">Mathematics</option>
+      <option value="Social Science">Social Science</option>
+      <option value="English">English</option>
+      <option value="Hindi">Hindi</option>
+    </select>
+
+    <label for="question">Enter your question</label>
+    <textarea id="question" placeholder="Example: What is protoplasm?"></textarea>
+
+    <button onclick="getAnswer()">✨ Get Answer</button>
+
+    <div class="answer-box">
+      <h2>Answer</h2>
+      <div id="answer">Ask a question to see the answer here.</div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Studify • Built with AI
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+        </html>
