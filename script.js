@@ -1,4 +1,4 @@
-const API_KEY = "PASTE_YOUR_GEMINI_API_KEY_HERE";
+const API_KEY = "AIzaSyBRzgBLdBvASrAhHUWGpOKbjkiMd1UA1e8";
 
 async function askAI() {
   const question = document.getElementById("question").value;
