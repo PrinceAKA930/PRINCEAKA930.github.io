@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Studify | Smart Study Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      color: #222;
+    }
+
+    header {
+      background: #1e40af;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    select, textarea, button {
+      width: 100%;
+      margin-top: 8px;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #output {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f1f5f9;
+      border-radius: 8px;
+    }
+
+    #answer {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📘 Studify</h1>
+  <p>Your AI-powered study helper</p>
+</header>
+
+<div class="container">
+
+  <label>Select Class</label>
+  <select id="class">
+    <option>Class 6</option>
+    <option>Class 7</option>
+    <option>Class 8</option>
+    <option selected>Class 9</option>
+    <option>Class 10</option>
+    <option>Class 11</option>
+    <option>Class 12</option>
+  </select>
+
+  <label>Select Subject</label>
+  <select id="subject">
+    <option>Mathematics</option>
+    <option>Science</option>
+    <option>English</option>
+    <option>Social Science</option>
+  </select>
+
+  <label>Enter your question</label>
+  <textarea id="question" placeholder="Type or paste your question here..."></textarea>
+
+  <button onclick="solveProblem()">✨ Get Answer</button>
+
+  <div id="output">
+    <h2>Answer</h2>
+    <pre id="answer">Your answer will appear here...</pre>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Studify | Learn Smart 🚀
+</footer>
+
+<script src="script.js"></script>
+</body>
+  </html>
